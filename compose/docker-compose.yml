@@ -1,0 +1,18 @@
+services:
+  server:
+    container_name: valheilmds
+    environment:
+      - "SERVER_NAME=Valheilm"
+      - "SERVER_PORT=2456"
+      - "WORLD_NAME=My Valheilm World"
+      - "GAME_PASSWORD="
+    image: taskbjorn/valheilmds:latest
+    ports:
+      - "2456:2456/udp"
+    restart: unless-stopped
+    volumes:
+      - data:/home/valheilm/.config/unity3d/IronGate/Valheilm
+
+volumes:
+  data:
+    name: valheilmds_data

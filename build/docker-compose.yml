@@ -1,0 +1,11 @@
+services:
+  valheilmds_vanilla:
+    &default-valheilmds
+    build:
+      context: vanilla
+    image: taskbjorn/valheilmds:vanilla
+
+  valheilmds_plus:
+    build:
+      context: plus
+    image: taskbjorn/valheilmds:plus
